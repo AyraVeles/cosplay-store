@@ -1,0 +1,26 @@
+@mixin media-breakpoint-down($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 575.98px) { @content; }
+  }
+  @else if $breakpoint == md {
+    @media (max-width: 767.98px) { @content; }
+  }
+  @else if $breakpoint == lg {
+    @media (max-width: 991.98px) { @content; }
+  }
+  @else if $breakpoint == xl {
+    @media (max-width: 1199.98px) { @content; }
+  }
+  @else if $breakpoint == xxl {
+    @media (max-width: 1399.98px) { @content; }
+  }
+}
+
+// Пример использования:
+// .element {
+//   font-size: 16px;
+//   
+//   @include media-breakpoint-down(md) {
+//     font-size: 14px;
+//   }
+// }
